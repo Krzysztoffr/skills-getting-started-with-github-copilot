@@ -159,15 +159,45 @@ footer {
   font-weight: bold;
 }
 
-.participants-list {
-  list-style-type: disc;
-  margin-left: 20px;
+  list-style-type: none;
+  margin-left: 0;
   color: #283593;
   font-size: 0.98em;
   padding-left: 0;
+  /* Remove default bullets and left margin */
 }
 
 .participants-list li {
   margin-bottom: 3px;
   padding-left: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.delete-participant {
+  color: #e53935;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 1.1em;
+  background: none;
+  border: none;
+  padding: 0 4px;
+  transition: color 0.2s;
+}
+.delete-participant:hover {
+  color: #b71c1c;
+}
+}
+
+<div class="activity-card">
+  <!-- ...existing activity info... -->
+  <div class="participants-section">
+    <h5>Participants</h5>
+    <ul class="participants-list">
+      <li>Alice</li>
+      <li>Bob</li>
+      <li>Charlie</li>
+    </ul>
+  </div>
+</div>

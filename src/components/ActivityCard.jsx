@@ -171,3 +171,19 @@ footer {
   margin-bottom: 3px;
   padding-left: 2px;
 }
+
+<div className="activity-card">
+  {/* ...existing activity info... */}
+  <div className="participants-section">
+    <h5>Participants</h5>
+    <ul className="participants-list">
+      {activity.participants.length === 0 ? (
+        <li><em>No participants yet</em></li>
+      ) : (
+        activity.participants.map((name, idx) => (
+          <li key={idx}>{name}</li>
+        ))
+      )}
+    </ul>
+  </div>
+</div>
